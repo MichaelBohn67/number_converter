@@ -1,4 +1,4 @@
-package com.example.number_converter.data;
+package de.bohnottensen.number_converter.data;
 
 import lombok.Getter;
 

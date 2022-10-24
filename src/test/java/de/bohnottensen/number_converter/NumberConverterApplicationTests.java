@@ -1,4 +1,4 @@
-package com.example.number_converter;
+package de.bohnottensen.number_converter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

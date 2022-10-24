@@ -1,11 +1,11 @@
-package com.example.number_converter.service;
+package de.bohnottensen.number_converter.service;
 
-import com.example.number_converter.data.RomanNumbers;
+import de.bohnottensen.number_converter.data.RomanNumbers;
 
 import java.util.List;
 
 public class RomanNumberService {
-    public String convertToRoman(int number) {
+    public String convertNumber(int number) {
         List<RomanNumbers> romanNummerals = RomanNumbers.getReverseSortedValues();
         StringBuilder result = new StringBuilder(1);
         int i = 0;

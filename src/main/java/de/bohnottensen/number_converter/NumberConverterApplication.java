@@ -1,4 +1,4 @@
-package com.example.number_converter;
+package de.bohnottensen.number_converter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

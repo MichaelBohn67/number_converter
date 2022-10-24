@@ -1,7 +1,7 @@
-package com.example.number_converter.service;
+package de.bohnottensen.number_converter.service;
 
 public class BinaryNumberService {
-    public String convertToBinary(int number) {
+    public String convertNumber(int number) {
         StringBuilder sb = new StringBuilder(1);
 
         while (number > 0) {
