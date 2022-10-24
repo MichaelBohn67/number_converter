@@ -1,6 +1,6 @@
 package de.bohnottensen.number_converter.service;
 
-public class BinaryNumberService {
+public class BinaryNumberService extends AbstractNumberConverter {
     public String convertNumber(int number) {
         StringBuilder sb = new StringBuilder(1);
 

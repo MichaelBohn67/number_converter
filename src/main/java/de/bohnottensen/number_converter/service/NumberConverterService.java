@@ -7,15 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NumberConverterService {
 
-    @GetMapping("/binary/{number}")
-    public String convertIntegerToBinary(@PathVariable int number) {
-        BinaryNumberService service = new BinaryNumberService();
+    @GetMapping("/convert/{number}/{type}")
+    public String convertIntegerToBinary(@PathVariable int number, @PathVariable String type) {
+        AbstractNumberConverter service = NumberConverterFactory.getNumberConverterService(type);
         return service.convertNumber(number);
     }
 
-    @GetMapping("/roman/{number}")
-    public String convertIntegerToRoman(@PathVariable int number) {
-        RomanNumberService service = new RomanNumberService();
-        return service.convertNumber(number);
-    }
 }

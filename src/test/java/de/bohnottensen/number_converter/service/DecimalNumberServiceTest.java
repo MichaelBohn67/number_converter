@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RomanNumberServiceTest {
+public class DecimalNumberServiceTest {
 
-    private final RomanNumberService service = new RomanNumberService();
+    private final DecimalNumberService service = new DecimalNumberService();
 
     @Test
     void givenDecimalOneReturnI(){

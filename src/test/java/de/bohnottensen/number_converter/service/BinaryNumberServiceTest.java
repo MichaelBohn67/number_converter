@@ -35,4 +35,5 @@ public class BinaryNumberServiceTest {
 
         assertEquals("11111111", result);
     }
+
 }

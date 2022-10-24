@@ -4,8 +4,9 @@ import de.bohnottensen.number_converter.data.RomanNumbers;
 
 import java.util.List;
 
-public class RomanNumberService extends AbstractNumberConverter {
-    public String convertNumber(int number) {
+public class DecimalNumberService extends AbstractNumberConverter {
+    @Override
+    String convertNumber(int number) {
         List<RomanNumbers> romanNummerals = RomanNumbers.getReverseSortedValues();
         StringBuilder result = new StringBuilder(1);
         int i = 0;
