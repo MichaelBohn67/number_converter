@@ -11,4 +11,9 @@ public class BinaryNumberService extends AbstractNumberConverter {
 
         return sb.reverse().toString();
     }
+
+    @Override
+    int convertNumber(String number) {
+        return 0;
+    }
 }

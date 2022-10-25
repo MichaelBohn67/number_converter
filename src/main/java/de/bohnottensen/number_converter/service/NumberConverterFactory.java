@@ -1,8 +1,9 @@
 package de.bohnottensen.number_converter.service;
 
+import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NumberConverterFactory {
 
     public static AbstractNumberConverter getNumberConverterService(String type) {
@@ -20,4 +21,5 @@ public class NumberConverterFactory {
         }
         return converter;
     }
+
 }

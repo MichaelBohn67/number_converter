@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
-public enum RomanNumbers {
+public enum RomanNumeral {
 
     I(1),
     IV(4),
@@ -23,15 +23,15 @@ public enum RomanNumbers {
     CM(900),
     M(1000);
 
-    private final int i;
+    private final int value;
 
-    RomanNumbers(int i) {
-        this.i = i;
+    RomanNumeral(int value) {
+        this.value = value;
     }
 
-    public static List<RomanNumbers> getReverseSortedValues() {
+    public static List<RomanNumeral> getReverseSortedValues() {
         return Arrays.stream(values())
-                .sorted(Comparator.comparing((RomanNumbers e) -> e.i).reversed())
+                .sorted(Comparator.comparing((RomanNumeral e) -> e.value).reversed())
                 .collect(Collectors.toList());
     }
 }

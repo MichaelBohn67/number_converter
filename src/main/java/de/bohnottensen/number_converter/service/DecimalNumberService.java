@@ -1,24 +1,29 @@
 package de.bohnottensen.number_converter.service;
 
-import de.bohnottensen.number_converter.data.RomanNumbers;
+import de.bohnottensen.number_converter.data.RomanNumeral;
 
 import java.util.List;
 
 public class DecimalNumberService extends AbstractNumberConverter {
     @Override
     String convertNumber(int number) {
-        List<RomanNumbers> romanNummerals = RomanNumbers.getReverseSortedValues();
+        List<RomanNumeral> romanNummerals = RomanNumeral.getReverseSortedValues();
         StringBuilder result = new StringBuilder(1);
         int i = 0;
         while((number > 0) && (i < romanNummerals.size()))  {
-            RomanNumbers currentSymbol = romanNummerals.get(i);
-            if(currentSymbol.getI() <= number){
+            RomanNumeral currentSymbol = romanNummerals.get(i);
+            if(currentSymbol.getValue() <= number){
                 result.append(currentSymbol.name());
-                number -= currentSymbol.getI();
+                number -= currentSymbol.getValue();
             } else {
                 i++;
             }
         }
         return result.toString();
+    }
+
+    @Override
+    int convertNumber(String number) {
+        return 0;
     }
 }
