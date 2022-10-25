@@ -14,9 +14,6 @@ public class NumberConverterFactory {
             case "decimal":
                 converter = new DecimalNumberService();
                 break;
-            case "roman":
-                converter = new RomanNumberService();
-                break;
             default:
                 converter = new RomanNumberService();
                 break;
