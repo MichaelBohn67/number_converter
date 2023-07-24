@@ -10,7 +10,7 @@ class NumberConverterFactoryTest {
     @Test
     void givenDecimalNumberReturnDecimalNumberService() {
         AbstractNumberConverter numberConverter = NumberConverterFactory.getNumberConverterService("decimal");
-        assertThat(numberConverter, isA(DecimalNumberService.class));
+        assertThat(numberConverter, isA(RomanNumberService.class));
     }
 
     @Test

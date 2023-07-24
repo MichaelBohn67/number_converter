@@ -12,9 +12,6 @@ public class NumberConverterFactory {
             case "binary":
                 converter = new BinaryNumberService();
                 break;
-            case "decimal":
-                converter = new DecimalNumberService();
-                break;
             default:
                 converter = new RomanNumberService();
                 break;

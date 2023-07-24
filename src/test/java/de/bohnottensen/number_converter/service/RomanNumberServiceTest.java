@@ -11,29 +11,29 @@ public class RomanNumberServiceTest {
 
     @Test
     void givenDecimalOneReturnI(){
-        int result = service.convertNumber("I");
+        String result = service.convertNumber(1);
 
-        assertEquals(1, result);
+        assertEquals("I", result);
     }
 
     @Test
     void givenDecimalThreeReturnIII(){
-       int result = service.convertNumber("III");
+        String result = service.convertNumber(3);
 
-        assertEquals(3, result);
+        assertEquals("III", result);
     }
 
     @Test
     void givenDecimal28ReturnXXVIII(){
-        int result = service.convertNumber("XXVIII");
+        String result = service.convertNumber(28);
 
-        assertEquals(28, result);
+        assertEquals("XXVIII", result);
     }
 
     @Test
     void givenDecimal1952ReturnXXVIII(){
-        int result = service.convertNumber("MCMLII");
+        String result = service.convertNumber(1952);
 
-        assertEquals(1952, result);
+        assertEquals("MCMLII", result);
     }
 }

@@ -7,31 +7,23 @@ import java.util.List;
 public class RomanNumberService extends AbstractNumberConverter {
     @Override
     String convertNumber(int number) {
-        return null;
-    }
-
-    public int convertNumber(String input) {
-        List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
-        String romanNumeral = input.toUpperCase();
-        int result = 0;
-
-
+        List<RomanNumeral> romanNummerals = RomanNumeral.getReverseSortedValues();
+        StringBuilder result = new StringBuilder(1);
         int i = 0;
-
-        while ((romanNumeral.length() > 0) && (i < romanNumerals.size())) {
-            RomanNumeral symbol = romanNumerals.get(i);
-            if (romanNumeral.startsWith(symbol.name())) {
-                result += symbol.getValue();
-                romanNumeral = romanNumeral.substring(symbol.name().length());
+        while((number > 0) && (i < romanNummerals.size()))  {
+            RomanNumeral currentSymbol = romanNummerals.get(i);
+            if(currentSymbol.getValue() <= number){
+                result.append(currentSymbol.name());
+                number -= currentSymbol.getValue();
             } else {
                 i++;
             }
         }
+        return result.toString();
+    }
 
-        if (romanNumeral.length() > 0) {
-            throw new IllegalArgumentException(input + " cannot be converted to a Roman Numeral");
-        }
-
-        return result;
+    @Override
+    int convertNumber(String number) {
+        return 0;
     }
 }
