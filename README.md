@@ -1,7 +1,7 @@
 # number_converter
 
 
-# cflox coding challenge
+# coding challenge
 
 You will be writing a web application called “NumberConverter”.
 
