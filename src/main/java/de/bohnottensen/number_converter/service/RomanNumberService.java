@@ -5,13 +5,19 @@ import de.bohnottensen.number_converter.data.RomanNumeral;
 import java.util.List;
 
 public class RomanNumberService extends AbstractNumberConverter {
+
+    static final List<RomanNumeral> ROMAN_NUMMERALS = RomanNumeral.getReverseSortedValues();
+    static final int ROMAN_NUMERALS_SIZE = ROMAN_NUMMERALS.size();
+
     @Override
     String convertNumber(int number) {
-        List<RomanNumeral> romanNummerals = RomanNumeral.getReverseSortedValues();
+        if(number <=0) {
+            throw new IllegalArgumentException("Number must be greater than 0");
+        }
         StringBuilder result = new StringBuilder(1);
         int i = 0;
-        while((number > 0) && (i < romanNummerals.size()))  {
-            RomanNumeral currentSymbol = romanNummerals.get(i);
+        while(i < ROMAN_NUMERALS_SIZE)  {
+            RomanNumeral currentSymbol = ROMAN_NUMMERALS.get(i);
             if(currentSymbol.getValue() <= number){
                 result.append(currentSymbol.name());
                 number -= currentSymbol.getValue();
