@@ -1,6 +1,8 @@
 package de.bohnottensen.number_converter.service;
 
 public class BinaryNumberService extends AbstractNumberConverter {
+
+    @Override
     public String convertNumber(int number) {
         StringBuilder sb = new StringBuilder(1);
 
@@ -12,8 +14,4 @@ public class BinaryNumberService extends AbstractNumberConverter {
         return sb.reverse().toString();
     }
 
-    @Override
-    int convertNumber(String number) {
-        return 0;
-    }
 }

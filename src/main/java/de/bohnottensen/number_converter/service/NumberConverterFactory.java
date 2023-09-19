@@ -9,6 +9,9 @@ public class NumberConverterFactory {
     public static AbstractNumberConverter getNumberConverterService(String type) {
         AbstractNumberConverter converter;
         switch (type) {
+            case "roman":
+                converter = new RomanNumberService();
+                break;
             case "binary":
                 converter = new BinaryNumberService();
                 break;

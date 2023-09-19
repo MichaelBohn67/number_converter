@@ -22,8 +22,4 @@ public class RomanNumberService extends AbstractNumberConverter {
         return result.toString();
     }
 
-    @Override
-    int convertNumber(String number) {
-        return 0;
-    }
 }
