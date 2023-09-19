@@ -12,14 +12,14 @@ public class RomanNumberService extends AbstractNumberConverter {
 
     @Override
     String convertNumber(int number) {
-        if(number <=0) {
+        if (number <= 0) {
             throw new IllegalArgumentException(ILLEGAL_ARGUMENT_EXCEPTION);
         }
         StringBuilder result = new StringBuilder(1);
         int i = 0;
-        while(i < ROMAN_NUMERALS_SIZE)  {
+        while (i < ROMAN_NUMERALS_SIZE) {
             RomanNumeral currentSymbol = ROMAN_NUMMERALS.get(i);
-            if(currentSymbol.getValue() <= number){
+            if (currentSymbol.getValue() <= number) {
                 result.append(currentSymbol.name());
                 number -= currentSymbol.getValue();
             } else {
